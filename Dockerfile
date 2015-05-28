@@ -58,6 +58,9 @@ RUN update-rc.d hhvm defaults
 # Boot up Nginx, and HHVM when container is started
 CMD service hhvm start && nginx
 
+# Set the current working directory
+WORKDIR /var/www/html
+
 # Expose port 80
 EXPOSE 80
 EXPOSE 443
