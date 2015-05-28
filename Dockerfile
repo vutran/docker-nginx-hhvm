@@ -46,6 +46,9 @@ COPY default.conf /etc/nginx/sites-available/default
 # Copy the index.php file
 COPY index.php /var/www/html/index.php
 
+# Update permissions
+RUN chown -R www-data:www-data /var/www/html
+
 # Mount volumes
 VOLUME ["/var/www/html"]
 
